@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="div1">
+      <div class="login-text">
+        <span>Login As</span>
+      </div>
+
+      <div class="student-section submit-section">
+        <div class="student-logo image"></div>
+        <div class="input-section">
+          <form action="/student_login" method="post">
+            <div class="form-group">
+              <label for="rollNumber">Roll Number:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="rollNumber"
+                name="roll_number"
+                placeholder="Roll Number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="teacher-section submit-section">
+        <div class="teacher-logo image"></div>
+        <div class="input-section">
+          <form action="/faculty_login" method="post">
+            <div class="form-group">
+              <label for="id">Faculty Id:</label>
+              <input
+                type="text"
+                id="rollNumber"
+                placeholder="Enter Your ID"
+                name="faculty_id"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                placeholder="Enter Your Password"
+                name="password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="div2">
+      <div class="logo">
+        <div class="actual-logo"></div>
+      </div>
+
+      <div class="logo-text">
+        <span>Welcome</span>
+        <span>To</span>
+        <span>ERP System</span>
+      </div>
+    </div>
+  </body>
+</html>

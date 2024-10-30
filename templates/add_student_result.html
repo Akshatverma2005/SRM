@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/add_student_result.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">DSEU ERP Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/faculty_dashboard">Faculty Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Add Result Form -->
+    <div class="container">
+        <h1 class="text-center">Add Student Result</h1>
+        <form action="/add_student_result" method="POST">
+            <div class="form-group">
+                <label for="roll_number">Roll Number</label>
+                <input type="number" class="form-control" id="roll_number" name="roll_number" placeholder="Enter Roll Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="python_marks">Python Marks</label>
+                <input type="number" class="form-control" id="python_marks" name="python_marks" placeholder="Enter Python Marks" required>
+            </div>
+
+            <div class="form-group">
+                <label for="web_dev_marks">Web Development Marks</label>
+                <input type="number" class="form-control" id="web_dev_marks" name="web_dev_marks" placeholder="Enter Web Development Marks" required>
+            </div>
+
+            <div class="form-group">
+                <label for="chm_marks">CHM Marks</label>
+                <input type="number" class="form-control" id="chm_marks" name="chm_marks" placeholder="Enter CHM Marks" required>
+            </div>
+
+            <div class="form-group">
+                <label for="english_marks">English Marks</label>
+                <input type="number" class="form-control" id="english_marks" name="english_marks" placeholder="Enter English Marks" required>
+            </div>
+
+            <div class="form-group">
+                <label for="iot_marks">IoT Marks</label>
+                <input type="number" class="form-control" id="iot_marks" name="iot_marks" placeholder="Enter IoT Marks" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Add Result</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

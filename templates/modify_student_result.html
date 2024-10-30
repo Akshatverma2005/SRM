@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Modify/Delete Student Result</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">DSEU ERP Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/faculty_dashboard">Faculty Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Modify Student Result</h2>
+        <form action="{{ url_for('modify_student_result') }}" method="POST">
+            <div class="form-group">
+                <label for="roll_number">Roll Number:</label>
+                <input type="text" class="form-control" name="roll_number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="python_marks">Python Marks:</label>
+                <input type="number" class="form-control" name="python_marks">
+            </div>
+            <div class="form-group">
+                <label for="web_dev_marks">Web Development Marks:</label>
+                <input type="number" class="form-control" name="web_dev_marks">
+            </div>
+            <div class="form-group">
+                <label for="chm_marks">CHM Marks:</label>
+                <input type="number" class="form-control" name="chm_marks">
+            </div>
+            <div class="form-group">
+                <label for="english_marks">English Marks:</label>
+                <input type="number" class="form-control" name="english_marks">
+            </div>
+            <div class="form-group">
+                <label for="iot_marks">IoT Marks:</label>
+                <input type="number" class="form-control" name="iot_marks">
+            </div>
+            <button type="submit" class="btn btn-primary">Modify Result</button>
+        </form>
+        
+        <hr>
+
+        <h4>Delete Student Result</h4>
+        <form action="{{ url_for('delete_student_result') }}" method="POST">
+            <div class="form-group">
+                <label for="roll_number">Roll Number:</label>
+                <input type="text" class="form-control" name="roll_number" required>
+            </div>
+            <button type="submit" class="btn btn-danger">Delete Result</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
